@@ -1,0 +1,129 @@
+@import url(http://fonts.googleapis.com/css?family=The+Girl+Next+Door);
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html { overflow-y: scroll; }
+body { 
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 62.5%; 
+  line-height: 1;
+  margin-bottom: 35px;
+  margin-top: 20px;
+  color: #555;
+  background: #fff url('images/bg.jpg'); 
+}
+
+br { display: block; line-height: 1.6em; } 
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+
+input, textarea { 
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none; 
+}
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+strong { font-weight: bold; } 
+
+table { border-collapse: collapse; border-spacing: 0; }
+img { border: 0; max-width: 100%; }
+
+a { color: #3d6abc; }
+a:hover { color: #6387c7; }
+
+h1 {
+  font-family: 'The Girl Next Door', Arial, sans-serif;
+  color: #373737;
+  font-size: 4.6em;
+  line-height: 100px;
+  text-align: center;
+  margin-bottom: 15px;
+  background: url('images/finnkino_250px.png') top right no-repeat;
+}
+
+h2 {
+  font-size: 2.7em;
+  line-height: 1.4em;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+p {
+  font-size: 1.4em;
+  line-height: 1.15em;
+  margin-bottom: 15px;
+}
+p.genre { font-size: 1.2em; color: #777; font-style: italic; margin-bottom: 20px; }
+
+
+#w {
+  display: block;
+  width: 750px;
+  margin: 0 auto;
+  padding: 12px;
+  background: #fff;
+  -webkit-box-shadow: 1px 2px 1px rgba(0,0,0,0.35);
+  -moz-box-shadow: 1px 2px 1px rgba(0,0,0,0.35);
+  box-shadow: 1px 2px 1px rgba(0,0,0,0.35);
+}
+
+#tvnav {
+  display: block;
+  margin-bottom: 25px;
+}
+
+#tvnav ul { list-style: none; }
+#tvnav ul li { margin-right: 4px; display: block; float: left; }
+
+#tvnav ul li a { 
+  padding: 3px 6px;
+  color: #5e83c6;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+  background: #dbe4f3;
+}
+#tvnav ul li a:hover {
+  background: #cbd8f0;
+  color: #526890;
+}
+
+#content { display: block; width: 100%; }
+
+.floatright {
+  display: block;
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+/* clearfix */
+.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+.clearfix { display: inline-block; }
+ 
+html[xmlns] .clearfix { display: block; }
+* html .clearfix { height: 1%; }

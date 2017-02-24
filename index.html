@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>Finnkino Showtime </title>
+  <link rel="stylesheet" type="text/css"  href="styles.css">
+ <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="w">
+    <h1>Finnkino WebApp</h1>
+   
+    <p class="desc">Select a Theater to see ongoing shows:</p>
+    
+    <nav id="tvnav">
+      <ul class="clearfix">
+        <li><a id="1039" onclick="Omena()">Espoo Omena</a></li>
+        <li><a id="1038" onclick="Sello()">Espoo Sello</a></li>
+        <li><a id="1031" onclick="Kinopalatsi()">Helsinki Kinopalatsi</a></li>
+        <li><a id="1033" onclick="Tennispalatsi()">Helsinki Tennispalatsi</a></li>
+        <li><a id="1013" onclick="Vantaa()">Vantaa</a></li>  
+      </ul>
+    </nav>
+    
+    <div id="content" class="clearfix">
+    </div>
+  </div>
+
+<script>
+function Kinopalatsi() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction(this);
+    }
+  };
+  xmlhttp.open("GET", "http://www.finnkino.fi/xml/Schedule/?area=1031", true);
+  xmlhttp.send();
+}
+    
+function Tennispalatsi() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction(this);
+    }
+  };
+  xmlhttp.open("GET", "http://www.finnkino.fi/xml/Schedule/?area=1033", true);
+  xmlhttp.send();
+}    
+    
+function Vantaa() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction(this);
+    }
+  };
+  xmlhttp.open("GET", "http://www.finnkino.fi/xml/Schedule/?area=1013", true);
+  xmlhttp.send();
+}    
+    
+function Omena() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction(this);
+    }
+  };
+  xmlhttp.open("GET", "http://www.finnkino.fi/xml/Schedule/?area=1039", true);
+  xmlhttp.send();
+}
+    
+function Sello() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction(this);
+    }
+  };
+  xmlhttp.open("GET", "http://www.finnkino.fi/xml/Schedule/?area=1038", true);
+  xmlhttp.send();
+}
+
+function myFunction(xml) {
+  var x, y, z, a, i, xmlDoc, txt, url;
+  xmlDoc = xml.responseXML;
+  txt = "";
+  x = xmlDoc.getElementsByTagName("OriginalTitle");
+  y = xmlDoc.getElementsByTagName("Genres");
+  a = xmlDoc.getElementsByTagName("EventLargeImageLandscape");
+  b = xmlDoc.getElementsByTagName("dttmShowStart");
+  c = xmlDoc.getElementsByTagName("RatingLabel");
+  z = xmlDoc.getElementsByTagName("ShowURL");
+  for (i = 0; i< x.length; i++) {
+      url = 
+      txt += "<p>" + "<strong><mark>" + x[i].childNodes[0].nodeValue + "</mark></strong>" + "<br>" +
+           "<strong>Genre: </strong>" + y[i].childNodes[0].nodeValue + "<br>" +
+           "<strong>Rating Label: </strong>"+ c[i].childNodes[0].nodeValue + "<br>" +
+           "<strong>Showtime: </strong>" + b[i].childNodes[0].nodeValue + "<br>" +
+           "<a href=\" " + z[i].childNodes[0].nodeValue  + " \"> " + "Get your tickets here:</a>" +"<br>" +
+           "<img src= \" " + a[i].childNodes[0].nodeValue + " \" "  + "<br>" + "<br>" + "<br>" ;
+  }
+  document.getElementById("content").innerHTML = txt;
+}
+</script>  
+</body>
+</html>
