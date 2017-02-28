@@ -13,7 +13,7 @@ A simple movie schedule web app created with basic javascript using [Finnkino AP
 
 ## Quick Look
 
-<img src='http://i.imgur.com/JzGct4k.gif' title='Demo' width='' alt='Demo' />
+<img src='http://i.imgur.com/012PjFW.gif' title='Demo' width='' alt='Demo' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
