@@ -13,13 +13,12 @@ A simple movie schedule web app created with basic javascript using [Finnkino AP
 
 ## Quick Look
 
-<img src='http://i.imgur.com/fRtvIE2.gif' title='Demo' width='' alt='Demo' />
+<img src='http://i.imgur.com/JzGct4k.gif' title='Demo' width='' alt='Demo' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Study Note
-- [X] react-bootstrap
-- [X] React libraries and ES6 syntax
-- [X] Web requests and APIs in React
-- [X] Flexbox - a form of styling often used in React applications that allows components and elements to expand based on portions of the screen. 
-- [X] Audio - native Javascript object
+- [X] Learn XML file structure
+- [X] Handle web request
+- [X] GET method, parameters, id
+
